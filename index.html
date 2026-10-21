@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Nahin Alonzo Naranjo | CV</title>
+    <title>Alan Nahin Alonso Naranjo | CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -34,7 +34,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 60px 20px;
             display: grid;
@@ -42,7 +42,6 @@
             gap: 40px;
         }
 
-        /* Animaciones */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -56,7 +55,6 @@
         .d2 { animation-delay: 0.3s; }
         .d3 { animation-delay: 0.5s; }
 
-        /* Columna Izquierda (Perfil y Habilidades) */
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -121,7 +119,6 @@
             border-radius: 50%;
         }
 
-        /* Habilidades Interactivas */
         .skills-container {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -139,7 +136,7 @@
         }
 
         .skill-item {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             cursor: pointer;
         }
 
@@ -148,7 +145,7 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             padding: 10px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 8px;
@@ -180,11 +177,10 @@
         }
 
         .skill-item.active .skill-desc {
-            max-height: 100px;
+            max-height: 150px;
             padding: 10px;
         }
 
-        /* Columna Derecha (Experiencia, Educación) */
         .main-content {
             display: flex;
             flex-direction: column;
@@ -248,9 +244,14 @@
             font-size: 0.9rem;
             color: var(--text-muted);
             line-height: 1.5;
+            margin-bottom: 15px;
         }
 
-        /* Responsive */
+        .timeline-desc ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
         @media (max-width: 850px) {
             .container {
                 grid-template-columns: 1fr;
@@ -263,13 +264,12 @@
 
     <div class="container">
         
-        <!-- Columna Izquierda -->
         <aside class="sidebar animate d1">
             <div class="profile-card">
                 <!-- FOTO: Cambia el enlace del src por tu foto real -->
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Alan Nahin Alonso Naranjo" class="profile-pic">
                 <h1 class="name">Alan Nahin<br>Alonso Naranjo</h1>
-                <div class="role">Programador & Ing. de Software</div>
+                <div class="role">Desarrollador Full-Stack</div>
                 
                 <div class="contact-info">
                     <span>0994320230</span>
@@ -282,88 +282,126 @@
                 <h2 class="title">Habilidades Técnicas</h2>
                 
                 <div class="skill-item" onclick="toggleSkill(this)">
-                    <div class="skill-header">HTML5</div>
-                    <div class="skill-desc">Lenguaje de marcado para estructurar contenido web. Base fundamental del desarrollo frontend.</div>
+                    <div class="skill-header">HTML5 & CSS3</div>
+                    <div class="skill-desc">Maquetación web semántica, diseño responsivo (Flexbox, Grid), animaciones y uso de frameworks como Tailwind CSS.</div>
                 </div>
                 <div class="skill-item" onclick="toggleSkill(this)">
-                    <div class="skill-header">CSS3</div>
-                    <div class="skill-desc">Diseño visual, animaciones y adaptabilidad a dispositivos móviles (Responsive Design).</div>
+                    <div class="skill-header">JavaScript & React</div>
+                    <div class="skill-desc">Desarrollo de lógica frontend, manipulación del DOM, creación de componentes interactivos y consumo de APIs REST.</div>
                 </div>
                 <div class="skill-item" onclick="toggleSkill(this)">
-                    <div class="skill-header">JavaScript</div>
-                    <div class="skill-desc">Programación del lado del cliente para crear interactividad, lógica y dinamismo en la web.</div>
+                    <div class="skill-header">POO (Java / Python)</div>
+                    <div class="skill-desc">Programación Orientada a Objetos aplicada a la resolución de problemas, manejo de estructuras de datos y algoritmos.</div>
                 </div>
                 <div class="skill-item" onclick="toggleSkill(this)">
-                    <div class="skill-header">POO (Java/C++)</div>
-                    <div class="skill-desc">Programación Orientada a Objetos. Creación de software modular, escalable y reutilizable.</div>
+                    <div class="skill-header">Bases de Datos (SQL / NoSQL)</div>
+                    <div class="skill-desc">Diseño de bases de datos relacionales (MySQL, PostgreSQL) y no relacionales (MongoDB), consultas complejas y optimización.</div>
                 </div>
                 <div class="skill-item" onclick="toggleSkill(this)">
                     <div class="skill-header">Desarrollo con IA</div>
-                    <div class="skill-desc">Implementación de herramientas de Inteligencia Artificial y uso de APIs para optimizar procesos.</div>
+                    <div class="skill-desc">Integración de APIs de Inteligencia Artificial (OpenAI, Gemini), procesamiento de lenguaje natural y automatización de flujos de trabajo.</div>
                 </div>
                 <div class="skill-item" onclick="toggleSkill(this)">
-                    <div class="skill-header">Diseño Web UI/UX</div>
-                    <div class="skill-desc">Creación de interfaces atractivas y centradas en brindar la mejor experiencia al usuario.</div>
+                    <div class="skill-header">Git & GitHub</div>
+                    <div class="skill-desc">Control de versiones, manejo de ramas, resolución de conflictos y despliegue de proyectos estáticos mediante GitHub Pages.</div>
                 </div>
                 <div class="skill-item" onclick="toggleSkill(this)">
-                    <div class="skill-header">Bases de Datos SQL</div>
-                    <div class="skill-desc">Gestión, estructuración y consulta de datos relacionales para aplicaciones robustas.</div>
+                    <div class="skill-header">Arquitectura de Software</div>
+                    <div class="skill-desc">Aplicación de patrones de diseño (MVC), principios SOLID y documentación de software para proyectos escalables.</div>
+                </div>
+                <div class="skill-item" onclick="toggleSkill(this)">
+                    <div class="skill-header">Metodologías Ágiles</div>
+                    <div class="skill-desc">Trabajo bajo marcos de desarrollo como Scrum y Kanban, gestión de tareas y trabajo colaborativo.</div>
                 </div>
             </div>
         </aside>
 
-        <!-- Columna Derecha -->
         <main class="main-content animate d2">
             
             <div class="section-card">
                 <h2 class="title">Perfil Profesional</h2>
                 <p class="timeline-desc">
-                    Estudiante de Ingeniería en Software en la Universidad Técnica de Ambato (UTA), con formación técnica previa en informática. Apasionado por el desarrollo de soluciones tecnológicas eficientes y la integración de Inteligencia Artificial. Cuento con sólidas bases en Programación Orientada a Objetos y desarrollo web moderno. Busco aplicar mis conocimientos en proyectos innovadores, aportando creatividad y resolución de problemas.
+                    Estudiante de Ingeniería en Software en la Universidad Técnica de Ambato (UTA), con formación técnica sólida como Bachiller en Informática. Apasionado por el ecosistema tecnológico y el desarrollo de soluciones digitales innovadoras. Poseo una fuerte inclinación hacia el desarrollo Full-Stack, la arquitectura de software y la integración de Inteligencia Artificial para optimizar procesos.
+                </p>
+                <p class="timeline-desc">
+                    Me caracterizo por mi pensamiento lógico, capacidad de autoaprendizaje constante y adaptabilidad a nuevos entornos tecnológicos. Busco oportunidades para aplicar mis conocimientos en Programación Orientada a Objetos, bases de datos y desarrollo web moderno, aportando valor a través de código limpio, trabajo en equipo y resolución creativa de problemas.
                 </p>
             </div>
 
             <div class="section-card">
-                <h2 class="title">Experiencia y Proyectos</h2>
+                <h2 class="title">Experiencia y Proyectos Destacados</h2>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">2023 - Presente</div>
-                    <div class="timeline-title">Desarrollador Web & Software</div>
-                    <div class="timeline-subtitle">Proyectos Académicos y Freelance</div>
+                    <div class="timeline-date">2024 - Presente</div>
+                    <div class="timeline-title">Desarrollador Frontend & Integrador de IA</div>
+                    <div class="timeline-subtitle">Proyecto Personal / Freelance</div>
                     <div class="timeline-desc">
-                        Creación de interfaces web interactivas y responsivas. Desarrollo de lógica de backend y aplicación de conceptos de POO. Creación de este portafolio digital interactivo con acceso vía QR y NFC.
+                        Diseño y desarrollo de aplicaciones web interactivas utilizando HTML, CSS y JavaScript.
+                        <ul>
+                            <li>Implementación de este portafolio digital (CV) con arquitectura optimizada, animaciones fluidas y acceso mediante códigos QR y tecnología NFC.</li>
+                            <li>Integración de herramientas de Inteligencia Artificial para la generación dinámica de contenido y optimización de la experiencia de usuario.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-title">Desarrollador de Software Académico</div>
+                    <div class="timeline-subtitle">Universidad Técnica de Ambato</div>
+                    <div class="timeline-desc">
+                        Creación de sistemas de gestión y lógica de negocio para proyectos universitarios.
+                        <ul>
+                            <li>Desarrollo de un sistema de gestión de inventarios aplicando Programación Orientada a Objetos en Java y bases de datos relacionales en MySQL.</li>
+                            <li>Colaboración en equipos ágiles bajo la metodología Scrum para la entrega de prototipos funcionales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-title">Técnico en Soporte y Redes (Prácticas)</div>
+                    <div class="timeline-subtitle">Bachillerato Técnico</div>
+                    <div class="timeline-desc">
+                        Mantenimiento preventivo y correctivo de equipos de cómputo, configuración de redes locales (LAN) y soporte técnico a usuarios, desarrollando habilidades de comunicación y resolución de incidencias.
                     </div>
                 </div>
             </div>
 
             <div class="section-card">
-                <h2 class="title">Formación Académica y Cursos</h2>
+                <h2 class="title">Formación Académica y Certificaciones</h2>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">En curso</div>
+                    <div class="timeline-date">Actualidad</div>
                     <div class="timeline-title">Ingeniería en Software</div>
                     <div class="timeline-subtitle">Universidad Técnica de Ambato (UTA)</div>
-                    <div class="timeline-desc">Enfoque en arquitectura de software, bases de datos y metodologías ágiles.</div>
+                    <div class="timeline-desc">Cursando estudios superiores con enfoque en arquitectura de software, estructuras de datos, ingeniería de requerimientos y metodologías de desarrollo.</div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">Completado</div>
                     <div class="timeline-title">Curso de Programación e Inteligencia Artificial</div>
                     <div class="timeline-subtitle">Certificación Complementaria</div>
-                    <div class="timeline-desc">Implementación de modelos básicos de IA y automatización de procesos de software.</div>
+                    <div class="timeline-desc">Capacitación intensiva en fundamentos de IA, automatización de tareas mediante scripts y aplicación de modelos de lenguaje en entornos de desarrollo.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Completado</div>
+                    <div class="timeline-title">Curso de Desarrollo Web Moderno</div>
+                    <div class="timeline-subtitle">Formación Autodidacta / Online</div>
+                    <div class="timeline-desc">Especialización en maquetación avanzada (HTML5, CSS3), interactividad con JavaScript y control de versiones con Git.</div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">Graduado</div>
                     <div class="timeline-title">Bachillerato Técnico en Informática</div>
                     <div class="timeline-subtitle">Formación Secundaria</div>
-                    <div class="timeline-desc">Fundamentos de redes, soporte técnico y desarrollo de software básico.</div>
+                    <div class="timeline-desc">Bases sólidas en hardware, software, redes y programación básica.</div>
                 </div>
             </div>
 
         </main>
     </div>
 
-    <!-- Script para desplegar las habilidades -->
     <script>
         function toggleSkill(element) {
             const allSkills = document.querySelectorAll('.skill-item');
